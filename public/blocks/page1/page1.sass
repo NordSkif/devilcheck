@@ -1,0 +1,53 @@
+.page1.wrapper
+    background: #000
+    background-image: url("../img/bgs/bg-2.jpg") !important
+    background-position: bottom center
+
+.page1
+
+    .wrapper
+        background: #000
+        background-image: url("../img/bgs/bg-2.jpg") !important
+        background-position: bottom center
+
+    .column
+        overflow: visible
+    .subtitle
+        margin-top: 39px
+        margin-bottom: 60px
+        @include widthFix(348px)
+
+    .big_title
+        margin-top: 17px
+        margin-bottom: 60px
+        @include widthFix(300px)
+
+    .text
+        @include widthFix(350px)
+        &__modified
+            margin-top: 40px
+
+    &__photo
+        margin-top: 45px
+        width: 173px
+        height: 227px
+        position: relative
+        &:after
+            @include img_blur
+            width: 173px
+            height: 227px
+            background-image: url("../img/objects/lozin.png")
+
+        .help-link__right
+            position: absolute
+            width: 173px
+            height: 227px
+            top: 0
+            &:after
+                left: 230px
+    .right-block.help-link__right
+        margin-top: 140px
+        align-items: flex-start
+    .right-block.help-link__bottom
+        margin-top: 140px
+        align-items: flex-start

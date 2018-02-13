@@ -1,0 +1,33 @@
+.main.wrapper
+    background: #000
+    background-image: url("../img/bgs/bg-main.jpg") !important
+    background-position: center center
+
+.main
+
+    .title
+        margin: 70px 0 100px 0
+        font-size: 30px
+        color: #fff
+        font-weight: 400
+        min-height: 30px
+
+    .subtitle
+        @include widthFix(308px)
+        margin-top: 84px
+        margin-bottom: 60px
+
+    .text
+        margin: 70px 0 100px 0
+        width: 340px
+        height: 220px
+        color: #fff
+
+    .link
+        position: absolute
+        bottom: 200px
+        &:after
+            top: 60px
+        .subtitle
+            margin-top: 20px
+            margin-bottom: 0

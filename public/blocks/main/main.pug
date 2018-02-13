@@ -1,0 +1,44 @@
+.main.wrapper
+    .container
+        .column.column__1x
+
+            .title Космические <br>технологии на Земле
+
+
+            .link.link__arrow-right(
+            data-swiper-parallax="-300"
+            v-on:click="goToSlide(1, 100)"
+            )
+                .text_dark .01
+                .subtitle Ссылка на слайд 2
+
+        .column.column__1x
+
+            .text Многие вещи и материалы, изначально предназначавшиеся для космоса, прочно вошли в нашу земную жизнь.
+
+            .link.link__arrow-right(
+                data-swiper-parallax="-300"
+                v-on:click="goToSlide(1, 100)"
+            )
+                .text_dark .02
+                .subtitle Ссылка на слайд 2
+
+        .column.column__1x
+            .link.link__arrow-right(
+                data-swiper-parallax="-100"
+                v-on:click="goToSlide(2, 200)"
+            )
+                .text_dark .03
+                .subtitle Ссылка на слайд 3
+        .column.column__1x
+
+            .link.link__arrow-right(
+            data-swiper-parallax="-300"
+            v-on:click="goToSlide(1, 100)"
+            )
+                .text_dark .04
+                .subtitle Ссылка на слайд 4
+
+        .hand-to-right__block
+    .bg-crosses
+    .bg-lines
