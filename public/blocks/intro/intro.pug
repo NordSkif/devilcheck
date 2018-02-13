@@ -1,14 +1,7 @@
 .intro(
     v-bind="swipeIntroInit, waitUser"
 )
-    video.intro__bg-video(
-        autoplay="autoplay"
-        loop="loop"
-    )
-        source(
-            src="video/bg-main.mp4"
-            type="video/mp4"
-        )
+
     .intro__title {{ pages.intro.block1 }}
     .intro__lang
         .intro__lang-text.intro__lang-text_active Ru
