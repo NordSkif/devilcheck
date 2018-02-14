@@ -7,7 +7,9 @@
         .header__text Заголовок слайда
         .header__pagination
             .swiper-pagination
-        .header__link(v-on:click="showModal('gallery')") Галерея
+
+            .swap-touch-select
+
         .header__lang(
             v-bind:class="[{'header__lang_move-right': isActiveImg || this.modals.popup1.active || this.modals.popup2.active || this.modals.popup3.active || this.modals.sidebar1.active || this.modals.sidebar2.active || this.modals.gallery.active}]"
         )
