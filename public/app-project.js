@@ -317,6 +317,26 @@ window.addEventListener('load', function() {
                                     /// если у нас isActivePopupBuran1, то пишем isActivePopup
     });
 
+    let longSlider = function (container) {
+      let offset = 0;
+      $(container).on('scroll', function () {
+        offset = $(this).scrollLeft();
+        $(this).addClass('swiper-no-swiping');
+
+        console.log(offset, 0);
+      });
+      $(container).on('touchend', function () {
+        if (offset > 1340) {
+          mySwiper.slideNext(1000);
+          console.log('ok');
+        }
+        else if (offset < 5) {
+          mySwiper.slidePrev(1000);
+        }
+      });
+    };
+    longSlider('.longSlider__container');
+
     mySwiper.on('slideChange', function () {
         let currentSlideNumber = mySwiper.activeIndex;
         console.log(currentSlideNumber);
@@ -330,6 +350,15 @@ window.addEventListener('load', function() {
         else {
           // console.log('Текущий слайд тёмный');
           changeHeaderColor.makeDark();
+        }
+
+        if ( currentSlideNumber === 1 || currentSlideNumber === 0) {
+          $('#firstBackground').css("opacity", '1');
+          $('#lastBackground').css("opacity", '0');
+        }
+        else {
+          $('#firstBackground').css("opacity", '0');
+          $('#lastBackground').css("opacity", '1');
         }
     });
     let changeHeaderColor = {
