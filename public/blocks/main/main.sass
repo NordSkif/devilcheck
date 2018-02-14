@@ -5,37 +5,51 @@
 
 .main
 
+    .bg-lines
+        background-image: url('../img/bgs/light_lines.png')
+        z-index: 1
+        opacity: 1
     .title
         margin: 70px 0 100px 0
         font-size: 30px
         color: #fff
+        font-family: $font-geometria
         font-weight: 400
         min-height: 30px
+
 
     .subtitle
         @include widthFix(308px)
         margin-top: 84px
         margin-bottom: 60px
-        font-weight: 400
+        font-weight: 500
         font-size: 22px
-
 
     .text
         margin: 70px 0 100px 0
         width: 340px
         height: 220px
         color: #fff
+        font-family: $font-geometria
 
     .text_white
         font-weight: 400
         font-size: 16px
+        font-family: $font-roboto
 
     .link
         position: absolute
 
-        bottom: 200px
+        bottom: 150px
         &:after
             top: 60px
+            @extend .icon-arrow-right
+            color: #fff
+            content: ''
+            position: absolute
+            transform: translate(0, -50%)
+
         .subtitle
             margin-top: 20px
             margin-bottom: 0
+
