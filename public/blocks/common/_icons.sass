@@ -183,3 +183,59 @@
         background-size: contain
         width: 77px
         height: 47px
+
+
+.ico
+    $ico-size: 54px
+    display: inline-block
+    width: $ico-size
+    height: $ico-size
+    text-align: center
+    &_bg_blue
+        background-color: $color-blue-l
+        box-shadow: 0 4px 12px $color-blue-shadow
+        border-radius: 50%
+    &:after
+        display: inline-block
+        line-height: $ico-size
+        font-family: $font-icomoon
+        font-size: 17px
+        color: #ffffff
+    /* размеры групп похожих иконок */
+    &[class*=__arr-slider]
+        width: 77px
+        &:after
+            font-size: 9px
+    &__arr
+        &-right:after
+            content: "\e905"
+        &-left:after
+            @extend .ico__arr-right
+            transform: scale(-1, 1)
+        &-big-left:after
+            content: "\e903"
+        &-big-right:after
+            @extend .ico__arr-big-left
+            transform: scale(-1, 1)
+        &-slider-right:after
+            content: "\e906"
+        &-slider-left:after
+            @extend .ico__arr-slider-right
+            transform: scale(-1, 1)
+        &-dots-right:after
+            content: "\e904"
+        &-popup-down:after
+            content: "\e900"
+    &__play:after
+        content: "\e902"
+    &__rect:after
+        content: "\e901"
+    &__hand
+        &-touch:after
+            width: 34px
+            font-size: 52px
+            content: "\e908"
+        &-swipe-left:after
+            width: 68px
+            font-size: 46px
+            content: "\e909"

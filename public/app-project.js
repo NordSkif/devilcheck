@@ -315,6 +315,30 @@ window.addEventListener('load', function() {
         element: '.popup',
         distance: 300
                                     /// если у нас isActivePopupBuran1, то пишем isActivePopup
-    })
+    });
+
+    mySwiper.on('slideChange', function () {
+        let currentSlideNumber = mySwiper.activeIndex;
+        console.log(currentSlideNumber);
+
+        let currentSlide = mySwiper.slides[currentSlideNumber];
+
+        if ( $(currentSlide).find('.wrapper').hasClass('slide-light') ) {
+          // console.log("текущий слайд светлый!");
+          changeHeaderColor.makeLight();
+        }
+        else {
+          // console.log('Текущий слайд тёмный');
+          changeHeaderColor.makeDark();
+        }
+    });
+    let changeHeaderColor = {
+        makeLight: function () {
+          $('.header__container').addClass('header__container-light').removeClass('header__container-dark');
+        },
+        makeDark: function () {
+          $('.header__container').removeClass('header__container-light').addClass('header__container-dark');
+        }
+    }
 
 });
